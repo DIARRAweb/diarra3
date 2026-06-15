@@ -15055,7 +15055,15 @@ let serviceCallId = null;
 const rtcConfig = {
   iceServers: [
     { urls: "stun:stun.l.google.com:19302" },
-    { urls: "stun:stun1.l.google.com:19302" }
+
+    {
+      urls: [
+        "turn:187.124.112.223:3478?transport=udp",
+        "turn:187.124.112.223:3478?transport=tcp"
+      ],
+      username: "cobraadmin",
+      credential: "Cobra2026Secure"
+    }
   ]
 };
 
